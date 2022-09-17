@@ -1,0 +1,19 @@
+name: "Git Sync Mirror"
+description: "Mirror your repository into another repository (Gitea and GitLab)"
+branding:
+  icon: "copy"
+  color: "yellow"
+inputs:
+  ssh_private_key:
+    description: "SSH private key for ssh connection to the target repository"
+    required: false
+  target_repo_url:
+    description: "Target url"
+    required: true
+  ssh_username:
+    description: "Username for ssh connection"
+    required: false
+    default: "git"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
