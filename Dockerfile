@@ -6,6 +6,6 @@ RUN apk update && apk upgrade && \
 RUN git lfs install
 
 COPY mirror.sh /mirror.sh
-COPY setup-ssh.sh /setup.sh
+COPY setup.sh /setup.sh
 
 ENTRYPOINT ["/mirror.sh"]
